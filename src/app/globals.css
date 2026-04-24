@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --background: #030303;
+  --surface: #0a0a0a;
+  --foreground: #fcfcfc;
+  --muted: #a1a1aa;
+  --border: #141414;
+  --accent: #e2a87a;
+  --accent-glow: color-mix(in srgb, var(--accent) 10%, transparent);
+  --med-blue: #0f2e4a;
+  --blue-glow: color-mix(in srgb, var(--med-blue) 40%, transparent);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-glow: var(--accent-glow);
+  --color-med-blue: var(--med-blue);
+  --color-blue-glow: var(--blue-glow);
+
+  --font-sans: var(--font-outfit);
+  --font-display: var(--font-playfair);
+  
+  --ease-magic: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html, body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Hide default cursor globally, except for inputs where needed */
+  cursor: none;
+}
+
+a, button, [role="button"] {
+  cursor: none;
+}
+
+body::after { 
+  content: ""; 
+  position: fixed; 
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' fill='%23ffffff' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  pointer-events: none; 
+  z-index: 9999; 
+  opacity: 0.15;
+}
+
+/* Custom glow utility */
+.ambient-glow {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ambient-glow-blue {
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--blue-glow) 0%, transparent 70%);
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}

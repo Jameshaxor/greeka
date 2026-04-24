@@ -1,0 +1,356 @@
+Premium Dark Design DNA    Built for Freelancers
+Page 1
+ PREMIUM DARK
+ Design DNA
+ Motion-Heavy · Editorial · Luxury Minimal
+ A complete visual blueprint for building high-end dark-themed websites
+ for SaaS, Cafés, Boutiques & Local Businesses — and selling them.
+ Reference: terminal-industries.com aesthetic
+◆ 01 / COLOR SYSTEM
+The Dark Palette
+Every premium dark site uses a carefully restrained palette. Near-black backgrounds, warm whites, and a single
+accent color used sparingly — this is what separates "cheap dark" from "luxury dark".
+Token
+Hex Value
+Usage
+Background
+#080808
+Page base — near-black, never pure black
+Surface
+#111111
+Cards, elevated sections
+Border
+#1f1f1f
+Dividers, card outlines
+Text Primary
+#f5f5f0
+Headlines — warm white, not harsh
+Text Muted
+#888888
+Body copy, secondary info
+Accent
+ONE color
+CTA button, icons, underlines only
+Accent Glow
+Accent @15%
+Glow shadows, subtle highlights
+Accent Color by Business Type
+Business
+Accent Color
+Hex
+SaaS / Tech
+Electric Green
+#4ade80
+Café / Coffee
+Warm Amber
+#d4956a
+Boutique
+Champagne Gold
+#c9a96e
+
+Premium Dark Design DNA    Built for Freelancers
+Page 2
+Salon / Spa
+Dusty Rose
+#c9a0a0
+Restaurant
+Terracotta
+#c87941
+Gym / Studio
+Neon White
+#e8e8e8
+→ Rules: Never use more than one accent color. Accent should appear on max 10% of the page. Use it on: one CTA
+button, one icon set, section labels only.
+◆ 02 / TYPOGRAPHY SYSTEM
+The Font Formula
+The single biggest differentiator between cheap and premium sites is typography. The formula: large thin serif for
+display + geometric sans for body + mono for labels.
+Role
+Font Choices
+Display / H1-H2
+Playfair Display, Cormorant Garamond, DM Serif Display
+Body / UI
+Geist, DM Sans, Outfit (NOT Inter or Roboto)
+Labels / Tags
+JetBrains Mono, IBM Plex Mono, Geist Mono
+Size Scale (Desktop)
+Element
+Size
+Weight
+Notes
+Hero H1
+96–120px
+300 (Thin)
+Thinness = luxury
+Section H2
+56–72px
+400
+Serif display font
+Body
+16–18px
+400
+line-height: 1.7
+Label
+11–12px
+600 Bold
+UPPERCASE + 0.15em spacing
+Nav links
+14px
+400
+0.05em letter-spacing
+→ KEY INSIGHT: Thin weight (300) on large serif headlines is the #1 thing that makes a site look premium. Heavy bold =
+cheap. Thin + large = luxury.
+◆ 03 / LAYOUT & SPACING
+Spatial Composition
+Premium sites breathe. The biggest mistake beginners make is too little padding. Use 2–3x more whitespace than
+you think you need.
+
+Premium Dark Design DNA    Built for Freelancers
+Page 3
+Property
+Value
+Max content width
+1200px – 1440px
+Section padding
+120px – 160px top/bottom
+Column gap
+80px – 100px
+Mobile side padding
+24px
+Card padding
+40px
+Border radius (cards)
+12px
+Layout Patterns
+   Full-bleed hero — content goes 100vw, no container box
+   Asymmetric split — 55% text / 45% visual (NOT equal 50/50)
+   Pinned scroll — left side fixed while right scrolls (advanced)
+   Stacked centered — headline centered, full width, massive
+   Logo bar — client logos horizontal strip at ~40% opacity
+◆ 04 / MOTION & ANIMATION
+The Motion System
+Motion is where "nice site" becomes "premium site". Every element should feel like it arrives with intention. The
+secret is one magic CSS curve.
+The Magic Easing Curve
+cubic-bezier(0.16, 1, 0.3, 1) ← "Expo Out" — use this everywhere
+Things start fast then settle softly. This single value is responsible for 60% of the premium feel. Copy it into every
+transition.
+Base Scroll Animation (apply to every section element)
+Initial state: opacity: 0; transform: translateY(40px);
+Final state: opacity: 1; transform: translateY(0);
+Transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+Page Load Sequence (Hero)
+Delay
+Element
+Animation
+
+Premium Dark Design DNA    Built for Freelancers
+Page 4
+0ms
+Nav
+Fade in
+200ms
+Hero label
+Slide up + fade in
+400ms
+H1 line 1
+Slide up + fade in
+600ms
+H1 line 2
+Slide up + fade in
+800ms
+Subtext
+Fade in
+1000ms
+CTA button
+Fade in + subtle scale
+Other Motion Details
+   Number counters — animate from 0 when scrolled into view (react-countup)
+   Video sections — autoplay, muted, looped, no controls visible
+   Card hover — translateY(-4px) + subtle accent glow shadow
+   Nav scroll — transparent → backdrop-blur(12px) frosted glass after 50px
+   Button hover — scale(1.02) + glow in accent color
+◆ 05 / PAGE STRUCTURE BLUEPRINT
+Section-by-Section Layout
+Every premium site follows this 10-section structure. Build this once as a template, then reskin per client.
+#
+Section
+Key Details
+01
+NAV
+Transparent → frosted glass on scroll. Logo L, links C, CTA R
+02
+HERO
+Full viewport height. Big thin serif. Video or 3D visual bg
+03
+STATS BAR
+3–4 animated numbers. Social proof. Dark surface bg
+04
+PROBLEM
+"Imagine if..." — centered text, large, no visuals needed
+05
+FEATURES
+Alternating left/right layout. Scroll-pinned on desktop
+06
+LOGO BAR
+"Trusted by" client logos. Muted 40% opacity. Slow scroll
+07
+TESTIMONIAL
+Full bleed. Dark photo bg. Large quote overlay
+08
+HOW IT WORKS
+Numbered steps or interactive tabs
+09
+CTA SECTION
+Full width. Accent bg. One headline. One button. Nothing else
+
+Premium Dark Design DNA    Built for Freelancers
+Page 5
+10
+FOOTER
+Dark. Minimal. 3 columns. Small text. Social icons
+◆ 06 / COMPONENT DETAILS
+UI Components
+Buttons
+Primary: border: 1px solid ACCENT | bg: ACCENT | text: #000
+Hover: scale(1.02) + box-shadow: 0 0 20px ACCENT/40%
+Secondary: border: 1px solid #333 | bg: transparent | text: #fff
+Hover: border-color → #fff
+Cards
+background: #111111
+border: 1px solid #1f1f1f
+border-radius: 12px | padding: 40px
+Hover: border-color → #333333, translateY(-4px), transition: 0.3s
+Section Labels (e.g. "BENEFIT 01")
+font: JetBrains Mono | size: 11px | color: ACCENT
+letter-spacing: 0.2em | text-transform: uppercase
+margin-bottom: 16px — always appears ABOVE the section heading
+Navigation
+Initially: background: transparent
+On scroll 50px+: background: rgba(8,8,8,0.8); backdrop-filter: blur(12px)
+Links: 14px | letter-spacing: 0.05em | no underline until hover
+◆ 07 / TEXTURE & DEPTH TRICKS
+What Makes It Feel Tactile
+Flat dark sites look amateur. These techniques add depth and make the design feel crafted:
+   Grain overlay — semi-transparent noise SVG over the whole page at 3–5% opacity. Makes it feel tactile, not
+digital-flat.
+   Gradient vignette — radial gradient from transparent center → black edges on hero sections.
+   Glow effect — on accent elements: box-shadow: 0 0 40px ACCENT/30%
+   Video blending — gradient overlay (transparent → #080808) at bottom of video sections so they bleed into
+the next section.
+
+Premium Dark Design DNA    Built for Freelancers
+Page 6
+   Section alternation — alternate between #080808 and #111111 for depth without using borders.
+   Noise texture CSS — background-image: url("data:image/svg+xml...") at opacity 0.03
+◆ 08 / RESKIN GUIDE FOR LOCAL BUSINESSES
+Adapting the Template
+The code structure is identical across all business types. You only swap: colors, fonts, hero visual, and copy.
+Everything else stays the same.
+Business
+Accent
+Display Font
+Hero Visual
+Label Style
+SaaS / Tech
+#4ade80 Green
+DM Serif Display
+3D / Video / Abstract
+FEATURE 01, BENEFIT 02
+Café
+#d4956a Amber
+Cormorant Garamond
+Coffee steam video
+OUR STORY, THE MENU
+Boutique
+#c9a96e Gold
+Playfair Display
+Editorial photo shoot
+COLLECTION, LOOKBOOK
+Restaurant
+#c87941 Terra
+DM Serif Display
+Full-bleed food photo
+THE KITCHEN, RESERVE
+Salon / Spa
+#c9a0a0 Rose
+Cormorant Garamond
+Soft ambient video
+SERVICES, BOOK NOW
+Gym / Studio
+#e8e8e8 White
+Bebas Neue
+High contrast action
+PROGRAM 01, RESULTS
+◆ 09 / FREELANCE BUSINESS MODEL
+Pricing & Workflow
+Build the master template once (1–2 weeks). Every client after that is a 2–3 day reskin job.
+Market
+Package
+Price (INR)
+Price (USD)
+India (local)
+Basic 5-section
+■15,000
+$180
+India (local)
+Full 10-section
+■30,000
+$360
+International
+Basic template
+■25,000
+$300
+International
+Custom premium
+■65,000
+$800
+Any market
+Monthly retainer
+■3,000/mo
+$40/mo
+Your Workflow per Client
+   Day 1: Clone master template, swap colors + fonts from reskin guide
+   Day 1: Replace placeholder text with client copy
+   Day 2: Swap hero visual (photo/video from Pexels or client)
+
+Premium Dark Design DNA    Built for Freelancers
+Page 7
+   Day 2: Update nav links, contact form, footer info
+   Day 3: Test on mobile, deploy to Vercel, deliver
+Tools to Use
+   v0.dev — generate sections from text prompts
+   Cursor AI — write/edit code with AI in VS Code
+   Pexels / Unsplash — free high-quality photos and videos
+   Google Fonts — Cormorant, Playfair, DM Serif (all free)
+   Vercel — deploy Next.js sites for free, custom domain $10/yr
+   Framer Motion — scroll animations (already in your Cinematic stack)
+◆ 10 / QUICK REFERENCE CHEATSHEET
+Copy-Paste Values
+CSS Variables (drop into :root)
+--bg: #080808;
+--surface: #111111;
+--border: #1f1f1f;
+--text: #f5f5f0;
+--muted: #888888;
+--accent: #c9a96e; /* change per client */
+--ease: cubic-bezier(0.16, 1, 0.3, 1);
+Framer Motion — Standard Scroll Reveal
+initial={{ opacity: 0, y: 40 }}
+whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+viewport={{ once: true }}
+Google Fonts Import (for Café/Boutique)
+import { Cormorant_Garamond, DM_Sans, JetBrains_Mono } from 'next/font/google'
+Tailwind — Card Component Classes
+bg-[#111] border border-[#1f1f1f] rounded-xl p-10
+hover:-translate-y-1 hover:border-[#333] transition-all duration-300
+Noise Grain Overlay (paste in globals.css)
+body::after { content: ""; position: fixed; inset: 0;
+background-image: url("/noise.png");
+
+Premium Dark Design DNA    Built for Freelancers
+Page 8
+opacity: 0.03; pointer-events: none; z-index: 9999; }
+ Built from the DNA of terminal-industries.com · Use freely for client work
+
